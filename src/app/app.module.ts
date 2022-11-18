@@ -8,21 +8,24 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './common-components/header/header.component';
 import { FooterComponent } from './common-components/footer/footer.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    LandingPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent,
+		LandingPageComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatSlideToggleModule,
+		HttpClientModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,1 @@
+export const POPULAR = "/discover/movie?sort_by=popularity.desc"
