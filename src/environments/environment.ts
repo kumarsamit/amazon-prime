@@ -4,9 +4,11 @@
 
 export const environment = {
   production: false,
-  base_api_url : 'https://api.themoviedb.org/3',
+  base_api_url_3 : 'https://api.themoviedb.org/3',
+  base_api_url_4 : 'https://api.themoviedb.org/4',
 	base_poster_url : 'https://image.tmdb.org/t/p/w500',
-	api_key : '&api_key=ddf611caad1fe1aab5910321c0cfa7ba',
+	api_key_3 : '&api_key=ddf611caad1fe1aab5910321c0cfa7ba',
+  api_key_4 : "&api_key=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZGY2MTFjYWFkMWZlMWFhYjU5MTAzMjFjMGNmYTdiYSIsInN1YiI6IjYyYzZhYTdmYjdhYmI1MDM2YWZkMjJiYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ko5CzabRKW0PcxSjIPXOzqlidpFUKGfdrfT0YOV0DOQ"
 };
 
 /*

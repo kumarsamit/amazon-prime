@@ -8,16 +8,18 @@ import { environment } from 'src/environments/environment';
 })
 export class HttpsService {
 
-	base_api_url = 'https://api.themoviedb.org/3';
-	base_poster_url = 'https://image.tmdb.org/t/p/w500';
-	api_key = '&api_key=ddf611caad1fe1aab5910321c0cfa7ba';
+
  
 
   constructor(private http:HttpClient,private router:ActivatedRoute) {
 
   }
-  getData(url: any) {
-	url = environment.base_api_url + url + environment.api_key + '&page=2'
+  getData3(url: any) {
+	url = environment.base_api_url_3 + url + environment.api_key_3
+	return this.http.get(url);
+  }
+  getData4(url: any) {
+	url = environment.base_api_url_4 + url + environment.api_key_3
 	return this.http.get(url);
   }
 }

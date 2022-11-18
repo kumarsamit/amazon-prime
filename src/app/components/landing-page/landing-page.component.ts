@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpsService } from 'src/app/services/https/https.service';
-import {POPULAR} from 'src/environments/api.paths'
+import {POPULAR,NOW_PLAYING} from 'src/environments/api.paths'
 
 
 
@@ -12,6 +12,7 @@ import {POPULAR} from 'src/environments/api.paths'
 export class LandingPageComponent implements OnInit {
 
   movieList:any=''
+  nowPlaying:any=''
 
   constructor(private movie : HttpsService) { 
 
@@ -19,15 +20,22 @@ export class LandingPageComponent implements OnInit {
   }
 
   getMovie(){
-    this.movie.getData(POPULAR).subscribe((resp)=>{
+    this.movie.getData3(POPULAR).subscribe((resp)=>{
       this.movieList = resp;
       console.log('this.movieList', this.movieList)
     })
   }
-
+  getMovie1(){
+    this.movie.getData4(NOW_PLAYING).subscribe((resp)=>{
+      this.nowPlaying = resp;
+      console.log('this.nowPlaying', this.nowPlaying)
+    })
+  }
 
   ngOnInit(): void {
     this.getMovie();
+    this.getMovie1();
+
   }
 
 }
